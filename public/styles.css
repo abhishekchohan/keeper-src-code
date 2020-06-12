@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 300px;
+  font-family: "McLaren";
+}
+
+
+/*=============   Header Component Styling =============*/
+
+.header {
+  width: 100vw;
+  background-color: #f5ba13;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+  width: 100vw;
+  color: #fff;
+  font-family: "McLaren";
+  font-weight: 200;
+  padding: 20px;
+}
+
+/*============== Content Component Styling =================*/
+
+.content {
+  position: relative;
+  min-height: calc(100vh - 176px);
+}
+
+
+/*==================  Form Component Styling  ================ */
+
+.form {
+  position: relative;
+  width: 65%;
+  margin: 0.8rem auto;
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.textfield {
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  min-height: 50px;
+  max-height: 100px;
+}
+
+.textfield:focus {
+  outline: none !important;
+  outline-offset: none !important;
+}
+
+.form input {
+  font-size: 1.25rem;
+  border: transparent;
+  width: 92%;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.titleInput {
+  margin-top: 1rem;
+}
+
+.noteInput {
+  margin-top: 0.3rem;
+  word-break: word-break;
+}
+
+.addButton {
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #f5ba13;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+  bottom: -1rem;
+  right: 1.2rem;
+}
+
+.addButton:focus {
+  outline: none;
+}
+
+.addButton:active {
+  background-color: #ffcd44;
+}
+
+.galleryButton {
+  left: 1.2rem;
+}
+
+
+/*===================   Notes Component Styling ===================*/
+
+.notes {
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(minmax(150px, 400px));
+}
+
+@media (min-width: 750px) and (max-width: 1039px) {
+  .notes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) and (max-width: 1400px) {
+  .form {
+    width: 40%;
+  }
+  .notes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .form {
+    width: 40%;
+  }
+  .notes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*================   Each Note Component Styling =============*/
+
+.eachNote {
+  position: relative;
+  width: 320px;
+  max-height: 250px;
+  margin: 20px auto;
+  padding: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 380px) {
+  .eachNote {
+    width: 65%;
+    margin-top: 25px;
+  }
+  .notes {
+    margin: 1.2rem;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.noteTitle {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin-bottom: 0.25rem;
+  font-weight: 900;
+}
+
+.noteContent {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin-bottom: 0.5rem;
+  overflow: auto;
+}
+
+.delete {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 1rem;
+  background-color: #fff;
+  border: none;
+  color: #f5ba13;
+  font-weight: bolder;
+  padding: 0.2rem;
+}
+
+.delete:focus {
+  outline: none;
+}
+
+.delete:active {
+  color: tomato;
+}
+
+/*==================  Footer Styling ==================*/
+
+.footer {
+  position: relative;
+  background-color: #f5ba13;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+/*====================  Model Component/ ExpandedNote Component Styling ===========*/
+
+#modalBody {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+/*=====================  End ==================*/
